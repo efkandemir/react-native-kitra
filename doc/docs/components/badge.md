@@ -64,10 +64,10 @@ export default App;
 | label                |<code> string \| number </code> | No      | The number or text to be written in the badge.                                             |
 | size                  | <code> 'small' \| 'medium'</code>                          | No       | The size of the badge. Default value: ``'medium'``                                          |
 | containerStyle   |[``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props)| No       | Additional styles to apply to the badge container.                        |
+| badgeStyle            | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props) | No | Custom styles applied directly to the badge element.                                       |
 | labelStyle          |[``StyleProp<TextStyle>``](https://reactnative.dev/docs/text-style-props)| No       | Additional styles to apply to the children text.                      |
 | variant               |<code>'circular'  \| 'rectangular'</code>                  | No   | Specifies the border type of the badge. Default value: ``'circular'``       |
 | icon            |[``React.ReactNode``](https://reactnative.dev/docs/react-node)                                | No       | Icon to be added to badge.                                                                |
 | children                 |[``React.ReactNode``](https://reactnative.dev/docs/react-node) | Yes  | A required prop that represents the content to display within the Badge component. |
-| position                 |<code>'top-right'\| 'top-left' \| 'bottom-left' \| 'bottom-right'</code> | No       | Position the Badge component. Default value: ``'top-right'``   |
+| badgePosition | <code>'top-right' \| 'top-left' \| 'bottom-left' \| 'bottom-right'</code> | No | Sets the position of the badge relative to its child element. Default value: `'top-right'`. |
 | theme                 |``UITheme ``                                       | No       | The theme to use for the component.                                                     |
-| typography            |``UITypography``                                    | No       | The typography to use for the component.                                                |

@@ -21,18 +21,23 @@ import { View } from 'react-native';
 const App = () => (
   <View style={{ flexDirection: 'column', alignItems: 'center' }}>
     <Button 
-      size="medium" 
-      iconPosition="left" 
-      label="Press Me!" 
-      style={{ alignSelf: 'center', marginBottom: 10 }} 
-      onPress={()=>console.log('pressed')}>
-        <Icon type="material-community" size={20} name="penguin" />
-    </Button>
+      size="medium"
+      label="Press Me!"
+      style={{ alignSelf: 'center', marginBottom: 10 }}
+      onPress={() => console.log('pressed')}
+      left={(isPressed) => (
+        <Icon 
+          type="material-community" 
+          size={20} 
+          name="penguin" 
+          color={isPressed ? '#888' : '#000'} 
+        />
+      )}
+    />
   </View>
 );
 
 export default App;
-
 
 ``` 
 ### Props
@@ -41,13 +46,13 @@ export default App;
 | Prop | Type | Required | Description |
 |------|------|----------|-------------|
 | size | <code>'small' \| 'medium' \| 'large'</code> | No | The size of the button. Default value: ``'medium'``. |
-| disabled | ``boolean`` | No | Determines whether the button is disabled. Default value: ``false``. |
+| disabled | ``boolean`` | No | Determines whether the button is disabled. Default value: ``'false'``. |
 | label | ``string`` | No | The label to display on the button. |
-| iconPosition | <code >'left' \| 'right'</code>  | No | The position of the icon in relation to the label. Default value: ``'left'``. |
+| left | [``(isPressed: boolean) => React.ReactNode``](https://reactnative.dev/docs/react-node) | No | Function that returns an icon or element to render on the ``'left'`` side of the button label. |
+| right | [``(isPressed: boolean) => React.ReactNode``](https://reactnative.dev/docs/react-node) | No | Function that returns an icon or element to render on the ``'right'`` side of the button label. |
 | style | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props) | No | The style object for the button. |
 | labelStyle | [``StyleProp<TextStyle>``](https://reactnative.dev/docs/text-style-props) | No | The style object for the button's text. |
-| children | [``React.ReactNode``](https://reactnative.dev/docs/react-node) | No | Icons to be rendered inside the button. |
-| statusStyle                 |``ActionProps``                                       | No       | Contains style definitions for a button component's normal, focused, and disabled states, specifying background and text colors.                                                     |
+| activeOpacity | `number` | No | The opacity applied when the button is pressed. Default value: `'1'`. |
 | theme | ``UITheme`` | No | The theme to use for the component. |
 | typography | ``UITypography`` | No | The typography to use for the component. |
 | ...PressableProps | [``Pressable``](https://reactnative.dev/docs/pressable#props) | No | Any additional props to be passed to the underlying `Pressable` component. |

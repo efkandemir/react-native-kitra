@@ -24,18 +24,17 @@ const App = () => {
   return (
     <View style={{ justifyContent: 'center', flex: 1 }}>
       <CheckBox
+        variant="circular"
         style={{ alignSelf: 'center' }}
         value={value}
-        onChange={event => console.log(event)}
+        onChange={(value) => console.log(value)}
         onPress={() => setValue(prev => !prev)}
-        iconColor="red"
       />
     </View>
   );
 };
 
 export default App;
-
 ```
 ### Props
 
@@ -43,9 +42,10 @@ export default App;
 | --- | --- | --- | --- |
 | value | `boolean` | No | Determines whether the checkbox is checked or unchecked |
 | onChange | `(value: boolean) => void` | No | A callback function that is called when the checkbox is pressed, with the new state value as an argument |
+| onPress | `(value: boolean) => void` | No | Called when the checkbox is pressed. Receives the new value as a parameter. |
 | style | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props) | No | Additional styles to apply to the checkbox container |
 | disabled | `boolean` | No | Determines whether the checkbox is disabled or not |
-| iconColor | `string` | No | The color of the checkmark icon |
+| variant | `'circular'` \| `'square'` | No | Defines the shape of the checkbox. Default value: `'circular'`. |
 | theme | `UITheme` | No | An object containing the color palette used for the checkbox |
 | ...TouchableOpacityProps | [``...TouchableOpacityProps``](https://reactnative.dev/docs/touchableopacity#props) | No | Any additional props to be passed to the underlying `TouchableOpacity` component. |
 

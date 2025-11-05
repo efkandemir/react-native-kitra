@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Activity Indicator
 
- The **Activity Indicator** component is displays loading indicator.
+ The **Activity Indicator** component displays an animated loading indicator to represent ongoing background processes or data loading states.
 
 
 

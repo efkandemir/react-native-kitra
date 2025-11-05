@@ -42,7 +42,7 @@ export default App;
 | label                 |``string``| No                                                 | Represents the initials of the name to be written on the avatar.                    |
 | labelStyle          |[``StyleProp<TextStyle>``](https://reactnative.dev/docs/text-style-props)| No       | Additional styles to apply to the label text.                         |
 | theme                 |``UITheme                                     `` | No       | The theme to use for the component.                                                     |
-| typography            |``UITypography                        
+| typography            |``UITypography                                `` | No       | The typography to use for the component.                                                |                
 
 ## Avatar Group
 
@@ -85,6 +85,6 @@ export default App;
 |-----------------------|-------------------------------------------------|----------|--------------------------------------------------------------------------------------------|
 | avatars           | ``Array<{``<br />`` source?: ImageSourcePropType,``<br />`` variant?: 'circular' \| 'rounded',``<br />`` avatarIcon?: React.ReactNode,``<br />`` containerStyle?: StyleProp<ViewStyle>,``<br />`` label?: string,``<br />``  labelStyle?: StyleProp<TextStyle>,``<br />`` textStyle?: StyleProp<TextStyle> }, ``<br />``}> ``| Yes      | Takes avatar props into array. |
 | avatarLimit           |``number``                                        | No      |  Limit of avatars to be listed. Default value: ``10``            |
-| limitContainerStyle   |<code>'circular' \| 'rounded'</code>                   | No       | Additional styles to apply to the limit container. |
+| limitContainerStyle | [``StyleProp<TextStyle>``](https://reactnative.dev/docs/text-style-props) | No | Defines custom styles for the '+X' overflow indicator that appears when the avatar limit is exceeded. |
 | theme                 |``UITheme                                     `` | No       | The theme to use for the component.                                                     |
 | typography            |``UITypography                                `` | No       | The typography to use for the component.                                                |
