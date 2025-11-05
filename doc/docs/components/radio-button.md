@@ -9,7 +9,7 @@ The **RadioButton** is a component that displays a circular button with a border
 ### Import
 
 ```js
-import { Slider } from '@tra-tech/react-native-kitra';
+import { RadioButton } from '@tra-tech/react-native-kitra';
 ```
 ### Usage
 
@@ -33,7 +33,7 @@ export default App;
 
 | Prop Name | Type | Required |  Description |
 | --- | --- | --- |  --- |
-| onChange | ``(event: boolean) => void`` | Yes  | A function that is called when the radio button is pressed. The current value of the radio button is passed as an argument to the function. |
+| onChange | ``(event: boolean) => void`` | No  | A function that is called when the radio button is pressed. The current value of the radio button is passed as an argument to the function. |
 | style | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props) | No  | Additional styles to apply to the radio button container. |
 | theme | ``UITheme`` | No  | The theme to use for the component. |
 

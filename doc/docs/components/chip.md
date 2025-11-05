@@ -18,15 +18,29 @@ import { Chip } from '@tra-tech/react-native-kitra';
 import { View } from 'react-native';
 
 const App = () => (
- <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Chip
-        icon={{ iconName: 'penguin', iconPosition: 'left', iconType: 'material-community' }}
-        label="Small"
-        size='large'
-        onChange={e => console.log(e)}
-        colorStyle={{ backgroundColor: 'tomato', selectBackgroundColor: 'white', selectTitleColor: 'tomato', titleColor: 'white' }}
+<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+  <Chip
+    label="Small"
+    size="large"
+    onChange={e => console.log(e)}
+    left={(isSelected) => (
+      <Icon
+        name="star"
+         type="material-community" 
+        color={isSelected ? 'gold' : 'gray'}
+        size={18}
       />
-  </View>
+    )}
+    right={(isSelected) => (
+      <Icon
+        name="check"
+        type="material-community" 
+        color={isSelected ? 'green' : 'gray'}
+        size={18}
+      />
+    )}
+  />
+</View>
 );
 
 export default App;
@@ -38,12 +52,12 @@ export default App;
 |--------------|----------------------------------------------------------------------------------------------------------------|----------|-----------------------------------------------------------------------------|
 | label        | ``string``                                                                                                     | No       | Text of chip.                                                               |
 | value        | ``boolean``                                                                                                     | No       | Status of chip.                  Default value: ``'false'``                                             |
+| left         | [``(isSelected?: boolean) => React.ReactNode``](https://reactnative.dev/docs/react-node)                       | No       | Function that returns an element to render on the **left** side of the chip label. Receives the chip’s selected state as a parameter. |
+| right        | [``(isSelected?: boolean) => React.ReactNode``](https://reactnative.dev/docs/react-node)                      | No       | Function that returns an element to render on the **right** side of the chip label. Receives the chip’s selected state as a parameter. |
 | labelStyle        | [``StyleProp<TextStyle>``](https://reactnative.dev/docs/text-style-props)                                      | No       | Additional styles to apply to the chip.                                     |
-| style        | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props)                                      | No       | Additional styles to apply to the label.                                     |
-| icon | `` { iconName: string,``<br/>``  iconType: IconType,``<br/>``  iconPosition: 'left' \| 'right'`` }     | No       | Adds an icon to a component with options for specifying the icon's name, type, and position  , enabling quick customization of the component's appearance.                              |
-| colorStyle   | `` { backgroundColor: string, selectBackgroundColor: string, selectTitleColor: string,``<br/>`` titleColor: string } `` | No       | Styles for chip color.                                                      |
+| style        | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props)                                      | No       | Additional styles to apply to the label.                                     |                                                     |
 | size         | <code> 'small' \| 'medium' \| 'large'</code>                                                                               | No       | The size of the chip. Default value: ``'small'``                              |
-| onChange     | ``(event:boolean)=> void``                                                                                     | Yes      | Returns whether the chip is selected.                                       |
+| onChange     | ``(event:boolean)=> void``                                                                                     | No      | Returns whether the chip is selected.                                       |
 | disabled      | ``boolean ``                                                                                                   | No       | If true the user won't be able to toggle the chip. Default value: ``false`` |
 | theme        | ``UITheme ``                                                                                                   | No       | The theme to use for the component.                                      |
 | typography   | ``UITypography``                                                                                               | No       | The typography to use for the component.                                 |

@@ -28,14 +28,14 @@ const App = () => (
         },
       },
       {
-        text: 'Sil',
+        label: 'Sil',
         style: {
           backgroundColor: 'red',
         },
       },
       {
         icon: <Icon type="evilicon" name="trash" size={18} color="white" />,
-        text: 'Diğer',
+        label: 'Diğer',
         style: {
           backgroundColor: 'orange',
         },
@@ -43,7 +43,7 @@ const App = () => (
     ]}
     leftAction={{
       icon: <Icon type="evilicon" name="trash" size={18} color="white" />,
-      text: 'Sil',
+      label: 'Sil',
       style: {
         backgroundColor: '#FF3434',
       },
@@ -62,10 +62,9 @@ export default App;
 | Name        | Type                                          | Required | Description                                                                                                                                                             |
 |------------------|-----------------------------------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | children         | [``React.ReactNode``](https://reactnative.dev/docs/react-node)                               | No      | The content to be wrapped by the `Swipeable` component.                                                                                                                 |
-| variant          | ``'radius'\|``<br/>`` 'no-radius'   ``                      | No       | Determines whether to use a rounded border radius on the component. Default value: ``'no-radius'``                                                                                                     |
-| rightActions     | ``Array<ActionProps>`` | No       | An array of objects representing the right swipe actions to be rendered. Each object can optionally contain a `text` string and can optionally contain an `icon` React component. |
-| leftAction       | ``ActionProps``     | No       | An object representing the left swipe action to be rendered. The object can optionally contain a `text` string and can optionally contain an `icon` React component.              |
-| theme            | ``UITheme``                                        | No      | An object containing colors and other styling properties used by the component.                                                                                         |
+| variant       | ``'radius' \| 'no-radius'``                    | No       | Determines whether to use a rounded border radius on the component. Default value: ``'no-radius'``                                                                       |
+| rightActions     | ``Array<ActionProps>`` | No       | An array of objects representing the right swipe actions to be rendered. Each object can optionally contain a `label` string and can optionally contain an `icon` React component. |
+| leftAction       | ``ActionProps``     | No       | An object representing the left swipe action to be rendered. The object can optionally contain a `label` string and can optionally contain an `icon` React component.              |
 | typography       | ``UITypography``                                        | No      | An object containing font sizes and styles used by the component.                                                                                                       |
 
 ### Types

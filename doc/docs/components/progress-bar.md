@@ -19,7 +19,6 @@ import { View, StyleSheet } from 'react-native';
 
 const App = () => (
   <View style={style.container}>
-    <ProgressBar progress={50} barColor="#EDEAF8" progressColor="#8973CD" />
     <ProgressBar progress={25} />
   </View>
 );
@@ -29,15 +28,13 @@ const style = StyleSheet.create({
 });
 
 export default App;
-
 ```
 ### Props
 
 | Prop Name     | Type                | Required | Description |
 |---------------|---------------------|----------|-------------|
-| progress      | ``number``              | No       | The progress value as a percentage. Default value: ``0``. |
-| barColor      | ``string``              | No       | The background color of the progress bar. |
-| progressColor | ``string``              | No       | The color of the progress bar. |
+| progress      | ``number``              | No       | The progress value as a percentage. Default value: ``0`` |
 | progressStyle | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props)  | No       |Style object to be applied to the progress bar. |
+| barStyle      | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props) | No       | Style object to customize the progress bar container.       |
 | theme         | ``UITheme``              | No       | The theme to use for the component. |
 

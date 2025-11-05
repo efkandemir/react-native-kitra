@@ -32,7 +32,6 @@ const App = () => {
           buttonTitle="Please Select"
           buttonTextStyle={{ color: 'black', marginLeft: 18 }}
           rowTextStyle={{ color: '#8973CD' }}
-          buttonBackgrounColor={{ focusBackground: '#8973CD', defaultBackground: '#F9F8FD' }}
           displayLength={4}
           rowStyle={{ backgroundColor: '#F9F8FD' }}
           buttonStyle={{ width: '100%', height: 51, borderRadius: 50 }}
@@ -50,7 +49,6 @@ const App = () => {
           buttonTitle="Please Select"
           buttonTextStyle={{ color: 'black', marginLeft: 18 }}
           rowTextStyle={{ color: '#8973CD' }}
-          buttonBackgrounColor={{ focusBackground: '#8973CD', defaultBackground: '#F9F8FD' }}
           displayLength={4}
           rowStyle={{ backgroundColor: '#F9F8FD' }}
           buttonStyle={{ width: '100%', height: 51, borderRadius: 50 }}
@@ -75,23 +73,28 @@ export default App;
 | disabled              | ``boolean``                    | No       | Determines whether the dropdown is disabled. Default value: ``false``.                           |
 | left                  | [``(isVisible:boolean)=>React.ReactNode``](https://reactnative.dev/docs/react-node)            | No        | A React node that will be created to the left of the dropdown button and return its visible.|
 | right                 | [``(isVisible:boolean)=>React.ReactNode``](https://reactnative.dev/docs/react-node)           | No        | A React node that will be created to the right of the dropdown button and return its visible. |
-| data                  | <code> Array{'<'}(string \| object )> </code>               | Yes       | An array of objects or strings to be used as options in the dropdown list. |
+| data                  | <code> Array{'<'}(string \| object ) </code>               | Yes       | An array of objects or strings to be used as options in the dropdown list. |
+| size                     | ``'small' \| 'medium' \| 'large'``                                                           | No       | Size of dropdown affecting height, typography, etc. Default: ``medium``                                         |
+| value                    | ``string \| object \| Array<string \| object>``                                               | No       | Controlled selected value(s). Single select: object/string, multiple select: array                               |
+| completeButtonLabel      | ``string``                                                                                   | No       | Label for submit/complete button.                                                      |
+| completeButtonLabelStyle | [``StyleProp<TextStyle>``](https://reactnative.dev/docs/text-style-props)                      | No       | Style for the submit/complete button label.                                             |
+| overflowButtonLabel      | ``((count: number) => string) \| string``                                                    | No       | Label when selected items exceed `displayLength`                                       |
+| selectallButtonLabel     | ``string``                                                                                   | No       | Label for "Select All" option.                                                            |
+| checkBoxVariant          | ``'rectangular' \| 'circular'``                                                             | No       | Checkbox style variant for multiple select: rectangular or circular.                    |
 | displayedRowValue     | <code>(item: string \| object) => any</code>                  | Yes       | A function that takes an item from the `data` array and returns a value to be displayed in the dropdown list. |
 | displayedButtonValue  | <code>(item: string \| object) => any </code>                  | Yes       | A function that takes an item from the `data` array and returns a value to be displayed on the dropdown button. |
 | listContainerStyle    | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props)                    | No        | An object containing styles to be applied to the dropdown list container. |
 | defaultValue          | ``Array<string \| object>``                     | No        | An array of objects or strings to be pre-selected in the dropdown. |
-| displayLength         | ``number``                    | No        | The number of  items to display in the button. |
+| displayLength         | ``number``                    | No        | The number of  items to display in the button Default Value: `4` |
 | buttonTitle           |  ``string``                 | No        | The default text to be displayed on the dropdown button when no options are selected. |
 | rowStyle              | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props)                    | No        | An object containing styles to be applied to each item in the dropdown list. |
 | buttonStyle           | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props)                    | No        | An object containing styles to be applied to the dropdown button. |
 | buttonTextStyle       | [``StyleProp<TextStyle>``](https://reactnative.dev/docs/text-style-props)                     | No        | An object containing styles to be applied to the text inside the dropdown button. |
-| selectall             | ``boolean``                   | No        | Whether to include a "Select All" option in the dropdown. |
+| selectall             | ``boolean``                   | No        | Whether to include a "Select All" option in the dropdown. Default value: `false` |
 | onSelect              |<code>(item: Array&lt;string&gt; \| Array&lt;object&gt; \| string \| object) =&gt; void</code>   | No        | A function to be called whenever an item is selected in the dropdown. |
 | onComplete            | <code >(item: object \| string) => void  </code>       | No        | A function to be called whenever submit button pressed. |
 | rowTextStyle          | [``StyleProp<TextStyle>``](https://reactnative.dev/docs/text-style-props)                     | No        | An object containing styles to be applied to the text inside each item in the dropdown list. |
 | containerStyle        | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props)                    | No        | An object containing styles to be applied to the dropdown container. |
-| buttonBackgrounColor  | ``{ focusBackground: string, defaultBackground: string }``| No       | Used to customize the background color of the dropdown. |
-| iconStyle             | ``{ color: string,``<br/>`` container: StyleProp<ViewStyle> }``    | No       | The color property determines the icon's color, and the container property defines the style of the container that holds the icon. |
 | autoPosition          | ``boolean``                    | No       | Controls whether the dropdown component's dropdown menu is positioned automatically. Default value: ``true`` |
 | theme                 | ``UITheme``                    | No       | The theme to use for the component. |
 | typography            | ``UITypography``                    | No       | The typography to use for the component. |

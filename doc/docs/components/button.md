@@ -48,11 +48,11 @@ export default App;
 | size | <code>'small' \| 'medium' \| 'large'</code> | No | The size of the button. Default value: ``'medium'``. |
 | disabled | ``boolean`` | No | Determines whether the button is disabled. Default value: ``'false'``. |
 | label | ``string`` | No | The label to display on the button. |
-| left | [``(isPressed: boolean) => React.ReactNode``](https://reactnative.dev/docs/react-node) | No | Function that returns an icon or element to render on the ``'left'`` side of the button label. |
-| right | [``(isPressed: boolean) => React.ReactNode``](https://reactnative.dev/docs/react-node) | No | Function that returns an icon or element to render on the ``'right'`` side of the button label. |
+| left | [``(isPressed: boolean) => React.ReactNode``](https://reactnative.dev/docs/react-node) | No | Function that returns an icon or element to render on the **left** side of the button label. |
+| right | [``(isPressed: boolean) => React.ReactNode``](https://reactnative.dev/docs/react-node) | No | Function that returns an icon or element to render on the **right** side of the button label. |
 | style | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props) | No | The style object for the button. |
 | labelStyle | [``StyleProp<TextStyle>``](https://reactnative.dev/docs/text-style-props) | No | The style object for the button's text. |
-| activeOpacity | `number` | No | The opacity applied when the button is pressed. Default value: `'1'`. |
+| activeOpacity | `number` | No | The opacity applied when the button is pressed. Default value: `1`. |
 | theme | ``UITheme`` | No | The theme to use for the component. |
 | typography | ``UITypography`` | No | The typography to use for the component. |
 | ...PressableProps | [``Pressable``](https://reactnative.dev/docs/pressable#props) | No | Any additional props to be passed to the underlying `Pressable` component. |

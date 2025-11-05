@@ -42,7 +42,6 @@ const style = StyleSheet.create({
 });
 
 export default App;
- 
 ```
 ### Props
 
@@ -54,11 +53,6 @@ export default App;
 | headerSliderStyle          | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props)                      | No       | Style of header slider.      |
 | headerContainerStyle          | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props)                      | No       | Style of header slider container.      |
 | headerLabelStyle          | [``StyleProp<TextStyle>``](https://reactnative.dev/docs/text-style-props)                     | No        | Text style of header text. |
-| injectPagerRef          | ``boolean``                 | No  | An optional boolean prop that determines whether to inject the PagerView reference into each child component's props. Default value: ``false``|
-| showDivider          | ``boolean``                 | No  |   Determines whether the divider is shown or not. Default value:``true`` |
-| dividerStyle          | [``StyleProp<ViewStyle>``](https://reactnative.dev/docs/view-style-props)                 | No  |   Style of divider  |
-| dividerColor          | ``string``                 | No  |   Color of divider |
-| icons     | ``React.ReactElement<typeof ``    [``Icon>``](http://localhost:3000/docs/components/icon) []                           | No       | Icon list for header texts.       |
 | theme          | ``UITheme ``                                                              | No       | The theme to use for the component.                |
 | typography     | ``UITypography``                                                          | No       | The typography to use for the component.        |
 
